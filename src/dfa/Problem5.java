@@ -12,7 +12,7 @@ public class Problem5 {
     private int[] startState;
     private int[] finalState;
     private char[] alphabet;
-    private Map<Integer, int[][]> transitionTable;
+    private Map<Integer, int[]> transitionTable;
     private DFA dfa;
     public Problem5(BufferedReader br , BufferedWriter bw) throws IOException {
         initProblem(bw);
