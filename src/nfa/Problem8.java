@@ -1,5 +1,4 @@
 package nfa;
-import core.BasicProblem;
 import core.Constants;
 
 import java.io.BufferedReader;
@@ -8,7 +7,7 @@ import java.io.IOException;
 import java.util.Map;
 import static java.util.Map.entry;
 
-public class Problem8 extends BasicProblem {
+public class Problem8 {
     private int[] states;
     private int[] startState;
     private int[] finalState;

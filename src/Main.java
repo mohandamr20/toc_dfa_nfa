@@ -1,4 +1,3 @@
-import core.BasicProblem;
 import core.Constants;
 import nfa.Problem10;
 import nfa.Problem8;
@@ -11,7 +10,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new FileReader(Constants.INPUT_FILE));
         BufferedWriter bw = new BufferedWriter(new FileWriter(Constants.OUTPUT_FILE));
         String line;
-        BasicProblem currentProblem;
         while ((line = br.readLine()) != null) {
             line = line.trim();
             String answer = "";
@@ -24,11 +22,11 @@ public class Main {
             } else if (line.equals(Constants.SIX)) {
             } else if (line.equals(Constants.SEVEN)) {
             } else if (line.equals(Constants.EIGHT)) {
-                currentProblem = new Problem8(br,bw);
+                Problem8 problem8 = new Problem8(br,bw);
             } else if (line.equals(Constants.NINE)) {
-                currentProblem = new Problem9(br,bw);
+                Problem9 problem9 = new Problem9(br,bw);
             } else if (line.equals(Constants.TEN)) {
-               currentProblem = new Problem10(br,bw);
+               Problem10 problem10 = new Problem10(br,bw);
             }
         }
         br.close();
