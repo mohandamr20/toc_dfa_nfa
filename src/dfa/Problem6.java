@@ -12,7 +12,7 @@ public class Problem6 {
     private int[] startState;
     private int[] finalState;
     private char[] alphabet;
-    private Map<Integer, int[][]> transitionTable;
+    private Map<Integer, int[]> transitionTable;
     private DFA dfa;
     public Problem6(BufferedReader br , BufferedWriter bw) throws IOException {
         initProblem(bw);
@@ -22,7 +22,7 @@ public class Problem6 {
     private void initProblem(BufferedWriter bw) throws IOException {
         states = new int[]{0, 1, 2, 3};
         startState = new int[]{0};
-        finalState = new int[]{2};
+        finalState = new int[]{1};
         alphabet = new char[]{'a','b'};
         initTransitions();
         initDFA();
@@ -31,10 +31,10 @@ public class Problem6 {
 
     private void initTransitions(){
         transitionTable = Map.ofEntries(
-               entry(0, new int[]{3, 2}),
-               entry(1, new int[]{4, 1}),
-               entry(2, new int[]{1, 4}),
-               entry(2, new int[]{2, 3})
+               entry(0, new int[]{2, 1}),
+               entry(1, new int[]{3, 0}),
+               entry(2, new int[]{0, 3}),
+               entry(3, new int[]{1, 2})
         );
     }
     private void initDFA(){
