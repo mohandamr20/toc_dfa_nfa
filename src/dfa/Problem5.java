@@ -20,9 +20,9 @@ public class Problem5 {
     }
 
     private void initProblem(BufferedWriter bw) throws IOException {
-        states = new int[]{0,1,2,3,4};
+        states = new int[]{0, 1, 2};
         startState = new int[]{0};
-        finalState = new int[]{4};
+        finalState = new int[]{0};
         alphabet = new char[]{'a','b'};
         initTransitions();
         initDFA();
