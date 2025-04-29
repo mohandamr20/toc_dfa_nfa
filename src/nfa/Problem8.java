@@ -1,25 +1,35 @@
 package nfa;
+import core.BasicProblem;
 import core.Constants;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.Map;
 import static java.util.Map.entry;
 
-public class Problem8{
+public class Problem8 extends BasicProblem {
     private int[] states;
     private int[] startState;
     private int[] finalState;
     private char[] alphabet;
     private Map<Integer, int[][]> transitionTable;
     private NFA nfa;
-    public Problem8(String input){
+    public Problem8(BufferedReader br , BufferedWriter bw) throws IOException {
+        initProblem(bw);
+        nfa.solveProblem(br,bw);
+    }
+
+    private void initProblem(BufferedWriter bw) throws IOException {
         states = new int[]{0,1,2,3,4};
         startState = new int[]{0};
         finalState = new int[]{4};
         alphabet = new char[]{Constants.EPSILON,'a','b'};
         initTransitions();
         initNFA();
-        System.out.println(nfa.isAccepted(input));
+        bw.append("8").append("\n");
     }
+
     private void initTransitions(){
         transitionTable = Map.ofEntries(
                 entry(0,new int[][]{{-1},{1},{0}}),

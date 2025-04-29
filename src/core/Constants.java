@@ -17,4 +17,8 @@ public class Constants {
     final public static String EIGHT = "8";
     final public static String NINE = "9";
     final public static String TEN = "10";
+    final public static String END = "end";
+    final public static String X = "x";
+    final public static String INPUT_FILE = "input.txt";
+    final public static String OUTPUT_FILE = "output.txt";
 }

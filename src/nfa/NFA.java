@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 
 public class NFA {
     private int[] states;
@@ -58,7 +59,15 @@ public class NFA {
     }
 
     public void solveProblem(BufferedReader br, BufferedWriter bw) throws IOException {
-        String input = br.readLine();
-        System.out.println(isAccepted(input) ? Constants.TRUE: Constants.FALSE);
+        String input;
+        while (!(input = br.readLine()).equals(Constants.END)){
+            input = input.trim();
+            if(isAccepted(input)) {
+                bw.append(Constants.TRUE).append("\n");
+            }else{
+                bw.append(Constants.FALSE).append("\n");
+            }
+        }
+        bw.append(Constants.X).append('\n');
     }
 }
