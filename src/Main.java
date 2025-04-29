@@ -22,9 +22,9 @@ public class Main {
             } else if (line.equals(Constants.THREE)) {
             } else if (line.equals(Constants.FOUR)) {
             } else if (line.equals(Constants.FIVE)) {
-                 Problem5 problem5 = new Problem7(br,bw);
+                 Problem5 problem5 = new Problem5(br,bw);
             } else if (line.equals(Constants.SIX)) {
-                 Problem6 problem6 = new Problem7(br,bw);
+                 Problem6 problem6 = new Problem6(br,bw);
             } else if (line.equals(Constants.SEVEN)) {
                 Problem7 problem7 = new Problem7(br,bw);
             } else if (line.equals(Constants.EIGHT)) {
