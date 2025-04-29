@@ -2,6 +2,7 @@ import core.Constants;
 import nfa.Problem10;
 import nfa.Problem8;
 import nfa.Problem9;
+import nfa.Problem7;
 
 import java.io.*;
 
@@ -21,6 +22,7 @@ public class Main {
             } else if (line.equals(Constants.FIVE)) {
             } else if (line.equals(Constants.SIX)) {
             } else if (line.equals(Constants.SEVEN)) {
+                Problem7 problem7 = new Problem7(br,bw);
             } else if (line.equals(Constants.EIGHT)) {
                 Problem8 problem8 = new Problem8(br,bw);
             } else if (line.equals(Constants.NINE)) {
