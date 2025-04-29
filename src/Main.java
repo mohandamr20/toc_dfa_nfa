@@ -3,6 +3,8 @@ import nfa.Problem10;
 import nfa.Problem8;
 import nfa.Problem9;
 import nfa.Problem7;
+import dfa.Problem6;
+import dfa.Problem5;
 
 import java.io.*;
 
@@ -20,7 +22,9 @@ public class Main {
             } else if (line.equals(Constants.THREE)) {
             } else if (line.equals(Constants.FOUR)) {
             } else if (line.equals(Constants.FIVE)) {
+                 Problem5 problem5 = new Problem7(br,bw);
             } else if (line.equals(Constants.SIX)) {
+                 Problem6 problem6 = new Problem7(br,bw);
             } else if (line.equals(Constants.SEVEN)) {
                 Problem7 problem7 = new Problem7(br,bw);
             } else if (line.equals(Constants.EIGHT)) {
